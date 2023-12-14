@@ -1,0 +1,94 @@
+
+
+
+def bubblesort(arr):
+    for i in range(len(arr)):
+        for j in range(0,len(arr)-i-1):
+            if(arr[j]>arr[j+1]):
+                temp=arr[j]
+                arr[j]=arr[j+1]
+                arr[j+1]=temp
+
+def selectionsort(array):
+    for i in range(len(array)):
+        min=i
+        for j in range(i+1,len(array)):
+            if(array[j]<array[min]):
+                min=j
+                temp=array[i]
+                array[i]=array[min]
+                array[min]=temp
+array=[]
+n=int(input("enter the number of element:"))
+for i in range(0,n):
+    element=int(input())
+    array.append(element)
+print(array)
+print("\n")
+print("choose the following")
+print("1:Bubble sort\n2:selection sort\n")
+choice=int(input("enter your choice: "))
+if choice==1:
+    print(" Array is:")
+    print(array)
+    print("sorted array is")
+    bubblesort(array)
+    print(array)
+elif choice==2:
+    print(" Array is:")
+    print(array)
+    print("sorted array is")
+    selectionsort(array)
+    print(array)
+else:
+    print("enter the valid number")
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arrays are fundamental data structures used to store collections of items of the same type. 
+They consist of a contiguous block of memory where each element can be accessed by its index. Arrays
+offer quick access to elements, making them efficient for retrieval but less flexible for insertion 
+or deletion, especially in large arrays where moving elements can be costly.
+
+Selection sort and bubble sort are simple sorting algorithms used to arrange elements in a specific order within an array.
+
+Selection Sort:
+This algorithm divides the array into two subarrays: sorted and unsorted. It
+repeatedly selects the smallest (or largest, depending on the sorting order) element from
+the unsorted subarray and swaps it with the first unsorted element. This process continues,
+expanding the sorted subarray until the entire array is sorted. While easy to implement, its time 
+complexity of O(n^2) makes it inefficient for large datasets.
+
+Bubble Sort:
+Bubble sort repeatedly steps through the array, comparing adjacent elements, and swapping them
+if they are in the wrong order. It continues this process, "bubbling" the largest (or smallest) 
+element to its correct position. This sorting method is straightforward but also has a time complexity of O(n^2),
+making it less efficient, especially with larger arrays.
+
+Both selection sort and bubble sort are useful for educational purposes due
+to their simplicity, but for larger datasets, more efficient algorithms like quicksort o
+r mergesort are typically preferred due to their better time complexities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
